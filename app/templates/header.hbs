@@ -3,6 +3,7 @@
   <nav class="navbar navbar-top hidden-xs">
     <div class="container">
       <!-- left nav top -->
+<p  class="text-white navbar-brand" style="font-size: 25px;" >Single Family Office</p>
       <ul class="nav navbar-nav pull-left">
       <!--  <li><a href="#"><span class="glyphicon glyphicon-thumbs-up text-white"></span></a></li>
         <li><a href="#"><span class="glyphicon glyphicon-globe text-white"></span></a></li>
@@ -12,7 +13,7 @@
       <!-- right nav top -->
       <ul class="nav navbar-nav pull-right">
         {{!-- <li><a href="#" class="text-white">About Us</a></li> --}}
-        {{!-- <li><a href="#" class="text-white">Contact Us</a></li>  --}}
+         <li><a href="#" class="text-white">User Name  {{usertype}}</a></li>
          {{!-- <li><a href="https://commercialui.herokuapp.com/home" class="text-white">Commertial Insurence</a></li>  --}}
       </ul>
     </div>
@@ -23,7 +24,6 @@
     <div class="container">
       <div class="flex-container">  
         <div class="navbar-header flex-item">
-          <div class="navbar-brand" href="#">Single Family Office </div>
         </div>
         <!--<ul class="nav navbar-nav flex-item hidden-xs">
           <li><a href="#">Projects</a></li>
@@ -32,20 +32,19 @@
         </ul>-->
         {{#if showUser}}
         <ul class="nav navbar-nav flex-item hidden-xs pull-right">
-          <li><a {{action 'toggleModal'}}><i class="material-icons"></i>Pledge Fund</a></li>
-                  <li><a {{action 'toggleModal'}}><i class="material-icons"></i> Portfolio</a></li>
-                  <li><a {{action 'toggleModal'}}><i class="material-icons"></i> Risk Management</a></li>
-                  <li><a {{action 'toggleModal'}}><i class="material-icons"></i> Report</a></li>
-                  <li><a {{action 'toggleModal'}}><i class="material-icons"></i> custodial Data</a></li>
+            <li><a {{action 'toggleModal'}}>Wealth Management</a></li>
+             <li><a {{action 'toggleModal'}}>Pludge Fund</a></li>
+                  <li><a {{action 'toggleModal'}}> Portfolio</a></li>
+                  <li><a {{action 'toggleModal'}}> Risk Management</a></li>
+                  <li><a {{action 'toggleModal'}}> Report</a></li>
+                  <li><a {{action 'toggleModal'}}> custodial Data</a></li>
 
-           <li><a ><b>Hello ,</b> {{usertype}}</a></li> 
-          <li><a {{action 'logout'}}>Logout</a></li> 
+           <li><a> {{usertype}}</a></li> 
 
         </ul>
         {{else}}
         <ul class="nav navbar-nav flex-item hidden-xs pull-right">
-            <li><a {{action 'toggleModal'}}>Wealth Management</a></li>
-                  
+          
           <li><a {{action 'toggleModal'}}><i class="material-icons"></i> Login</a></li> 
         </ul>
         {{/if}}
@@ -90,3 +89,14 @@ $(window).scroll(function() {
   
     </script>
     
+
+
+
+
+
+
+{{!-- 
+    {{#link-to 'index' tagName="li"}}<a href="">Home</a>{{/link-to}}
+            {{#link-to 'about' tagName="li"}}<a href="">About</a>{{/link-to}}
+            {{#link-to 'contact' tagName="li"}}<a href="">Contact</a>{{/link-to}}
+      </ul> --}}

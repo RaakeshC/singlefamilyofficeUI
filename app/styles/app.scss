@@ -1,3 +1,4 @@
+@import 'ember-paper';
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
 @import "bootstrap";
@@ -119,3 +120,6 @@ html {
     font-family: "Roboto";
 }
 
+.paper-right {
+    margin-left: auto;
+  }
